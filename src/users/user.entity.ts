@@ -1,13 +1,13 @@
-import { Report } from 'src/reports/report.entity';
-import { 
-  AfterInsert, 
-  AfterRemove, 
-  AfterUpdate, 
-  Entity, 
-  Column, 
-  PrimaryGeneratedColumn, 
-  OneToMany 
+import {
+  AfterInsert,
+  AfterRemove,
+  AfterUpdate,
+  Entity,
+  Column,
+  PrimaryGeneratedColumn,
+  OneToMany,
 } from 'typeorm';
+import { Report } from '../reports/report.entity';
 
 @Entity()
 export class User {

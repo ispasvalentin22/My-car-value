@@ -2,7 +2,7 @@ import {
   UseInterceptors,
   NestInterceptor,
   ExecutionContext,
-  CallHandler
+  CallHandler,
 } from '@nestjs/common';
 import { Observable } from 'rxjs';
 import { map } from 'rxjs/operators';
@@ -23,7 +23,7 @@ export class SerializeInterceptor implements NestInterceptor {
     return handler.handle().pipe(
       map((data: any) => {
         return plainToClass(this.dto, data, {
-          excludeExtraneousValues: true
+          excludeExtraneousValues: true,
         });
       }),
     );
